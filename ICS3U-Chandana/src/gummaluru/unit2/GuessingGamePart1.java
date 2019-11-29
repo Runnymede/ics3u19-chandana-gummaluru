@@ -2,7 +2,7 @@ package gummaluru.unit2;
 
 import java.util.Scanner;
 /**
- * GuessingGame.java <br>
+ * GuessingGame.java <br> This program is a guessing game, however the user cannot play again.
  * Wed, Oct 23rd, 2019
  * @author Chandana Gummaluru
  */

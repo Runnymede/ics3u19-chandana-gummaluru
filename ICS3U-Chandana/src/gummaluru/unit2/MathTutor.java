@@ -2,7 +2,7 @@ package gummaluru.unit2;
 
 import java.util.Scanner;
 /**
- * MathTutor.java <br>
+ * MathTutor.java <br> This program asks the user math equations form them to solve.
  * Fri, Oct 24rd, 2019
  * @author Chandana Gummaluru
  */

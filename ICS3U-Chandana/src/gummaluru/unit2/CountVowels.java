@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CountVowels {
 	/**
-	 * 
+	 * This program checks and prints out how many vowels are in your word.
 	 * Mon, Nov 18th, 2019
 	 * @author Chandana Gummaluru
 	 */	

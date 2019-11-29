@@ -35,7 +35,8 @@ public class TicTacToe {
 				System.out.println("------");			
 			}
 			System.out.println("Which row number you would like to place your O? ");
-			int rowO = sc.nextInt();	
+			int rowO = sc.nextInt();
+			
 			System.out.println("Which column number you would like to place your O? ");
 			int columnO = sc.nextInt();
 			tttboard[rowO][columnO]= 'O';

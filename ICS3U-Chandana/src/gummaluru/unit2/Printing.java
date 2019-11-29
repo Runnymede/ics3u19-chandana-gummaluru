@@ -21,6 +21,7 @@ public class Printing {
 		double copyprice;
 		double price;
 		
+		//Determines the price for each copy and the price for the total copies based on how many copies the user would like.
 		if (copies < 100)
 
 		{
@@ -53,8 +54,11 @@ public class Printing {
 			copyprice = 0.25;
 			price = copies*0.25;
 		}
-
+		
+		//Displays the price per copy.
 		System.out.println("Price per copy: $" + copyprice);
+		
+		//Displays the total price.
 		System.out.println("Total price: $" + price);
 
 

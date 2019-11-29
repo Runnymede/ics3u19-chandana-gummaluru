@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class NumberChecker {
 	/**
-	 * This is the entry point to the program.
+	 * This program tells the user if their number is positive/negative and whether it's divisible by 7.
 	 * @param args
 	 */
 	public static void main (String[]args) {

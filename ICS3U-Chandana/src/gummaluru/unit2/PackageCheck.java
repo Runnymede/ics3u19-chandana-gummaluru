@@ -1,9 +1,9 @@
 package gummaluru.unit2;
 
 import java.util.Scanner;
-
 /**
  * Tues, Oct 15th, 2019
+ * This program determines if a package is too heavy, too large, neither, or both.
  * @author Chandana Gummaluru
  */
 public class PackageCheck {

@@ -1,7 +1,7 @@
 package gummaluru.unit2;
 import java.util.Scanner;
 /**
- * Allows the user to enter as many model numbers as needed.
+ * Allows the user to enter as many model numbers as needed. <br> Then displays whether or not the car is defective based on its model number.
  * Mon, Oct 28th, 2019
  * @author Chandana Gummaluru
  */

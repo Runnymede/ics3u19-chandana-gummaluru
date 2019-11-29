@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class NecklaceProblem {
 	/**
 	 *This program begins with two single-digit numbers. 
+	 *The next number is obtained by adding the first two numbers together and saving only the ones digit. 
+	 *This process is repeated until the "neckalce" closes by returning to the original two numbers. 
 	 * Mon, Oct 4th, 2019
 	 * @author Chandana Gummaluru
 	 */	

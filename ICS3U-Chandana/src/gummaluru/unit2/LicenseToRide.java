@@ -2,7 +2,7 @@ package gummaluru.unit2;
 
 public class LicenseToRide {
 	/**
-	 * 
+	 * This program displays the possible combinations to receive a license plate sum of 34 or higher. Then, it displays the probability
 	 * Thurs, Nov 14th, 2019
 	 * @author Chandana Gummaluru
 	 */	
