@@ -12,28 +12,28 @@ public class IsoTriangle {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("What size do you want for your isosceles triangle?");
 		int lineNum = sc.nextInt();
-		
-		for (int i=1;i<=lineNum;i
-		drawSpaces(lineNum);
-		drawStars(lineNum);
+
+		for (int i=1;i<=lineNum;i++) {
+			drawSpaces(lineNum-i);
+			drawStars(i*2-1);
+			System.out.println();
+		}	
+		sc.close();
 	}
 
 	public static void drawSpaces(int num){
-		for(int a=num-1; a>0; a--) {
-			for(int b=0; b<a; b++) {
-				System.out.print(" .");
-			}
+		for(int a=0; a<num; a++) {
+
+			System.out.print("*");
 		}
-		System.out.println();
 	}
 
 	public static void drawStars(int stars){
-		for (int c=1; c<stars*2; c=c+2) {
-			for(int d=0; d<c; d++) {
-				System.out.print("*");	
-			}
+		for (int b=0; b<stars; b++) {
+			System.out.print("");	
 		}
-		System.out.println();
 	}
 
 }
+
+

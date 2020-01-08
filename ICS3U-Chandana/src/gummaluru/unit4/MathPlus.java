@@ -27,13 +27,18 @@ public class MathPlus {
 		}
 
 		int small = min(array);
-		System.out.println(small);
+		System.out.println("The smallest number is at index: " + small);
 
 		int big = max(array);
-		System.out.println(big);
+		System.out.println("The biggst number is at index: " + big);
 		
 		int sum = sum(array);
-		System.out.println(sum);
+		System.out.println("The sum of all the numbers is: " + sum);
+		
+		double average = average(array);
+		System.out.println("The average of all the numbers is: " +average);
+		
+
 				
 				
 				
@@ -82,19 +87,76 @@ public class MathPlus {
 		for(int i=1; i<sumNum.length; i++) {
 		indexSum = indexSum + sumNum[i];
 		}
-		//Sends the biggestIndex to the main method.
+		//Sends the indexSum to the main method.
 		return indexSum;
 	}
-	
-	public static int average(int[]avNum){
+	/**
+	 * 
+	 * @param avNum
+	 * @return the average of all the values in the array.
+	 */
+	public static double average(int[]avNum){
 		int indexAv = avNum[0];
 		for(int i=1; i<avNum.length; i++) {
 		indexAv = indexAv + avNum[i];
 		}
-		indexAv/avNum.length;
+		int av = indexAv/avNum.length;
+		
+		//Sends the av to the main method.
+		return av;
+	}
+	
+	
+	public static int min(double[]smallestNum){
+		int smallestIndex = 0;
+		for(int i=0; i<smallestNum.length; i++) {
+
+			if(smallestNum[i]<smallestNum[smallestIndex]) {
+				smallestIndex=i;
+			}		
+		}
+		//Sends the smallIndex to the main method.
+		return smallestIndex;
+	}
+	
+	public static int max(double[]biggestNum){
+		int biggestIndex = 0;
+		for(int i=0; i<biggestNum.length; i++) {
+
+			if(biggestNum[i]>biggestNum[biggestIndex]) {
+				biggestIndex=i;
+			}		
+		}
 		//Sends the biggestIndex to the main method.
+		return biggestIndex;
+	}
+	
+	public static double sum(double[]sumNum){
+		double indexSum = sumNum[0];
+		for(int i=1; i<sumNum.length; i++) {
+		indexSum = indexSum + sumNum[i];
+		}
+		//Sends the indexSum to the main method.
 		return indexSum;
 	}
+	
+	public static double average(double[]avNum){
+		double indexAv = avNum[0];
+		for(int i=1; i<avNum.length; i++) {
+		indexAv = indexAv + avNum[i];
+		}
+		double av = indexAv/avNum.length;
+		
+		//Sends the av to the main method.
+		return av;
+	}
+	
+	public static double median(double[]medNum){
+	
+	
+	
+	}
 }
+
 
 
