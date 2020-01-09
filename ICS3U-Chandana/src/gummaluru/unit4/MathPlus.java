@@ -1,5 +1,6 @@
 package gummaluru.unit4;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MathPlus {
@@ -31,17 +32,17 @@ public class MathPlus {
 
 		int big = max(array);
 		System.out.println("The biggst number is at index: " + big);
-		
+
 		int sum = sum(array);
 		System.out.println("The sum of all the numbers is: " + sum);
-		
+
 		double average = average(array);
 		System.out.println("The average of all the numbers is: " +average);
-		
 
-				
-				
-				
+
+
+
+
 	}
 	/**
 	 * This method determines the lowest number value in the array.	
@@ -85,7 +86,7 @@ public class MathPlus {
 	public static int sum(int[]sumNum){
 		int indexSum = sumNum[0];
 		for(int i=1; i<sumNum.length; i++) {
-		indexSum = indexSum + sumNum[i];
+			indexSum = indexSum + sumNum[i];
 		}
 		//Sends the indexSum to the main method.
 		return indexSum;
@@ -98,15 +99,15 @@ public class MathPlus {
 	public static double average(int[]avNum){
 		int indexAv = avNum[0];
 		for(int i=1; i<avNum.length; i++) {
-		indexAv = indexAv + avNum[i];
+			indexAv = indexAv + avNum[i];
 		}
 		int av = indexAv/avNum.length;
-		
+
 		//Sends the av to the main method.
 		return av;
 	}
-	
-	
+
+
 	public static int min(double[]smallestNum){
 		int smallestIndex = 0;
 		for(int i=0; i<smallestNum.length; i++) {
@@ -118,7 +119,7 @@ public class MathPlus {
 		//Sends the smallIndex to the main method.
 		return smallestIndex;
 	}
-	
+
 	public static int max(double[]biggestNum){
 		int biggestIndex = 0;
 		for(int i=0; i<biggestNum.length; i++) {
@@ -130,31 +131,45 @@ public class MathPlus {
 		//Sends the biggestIndex to the main method.
 		return biggestIndex;
 	}
-	
+
 	public static double sum(double[]sumNum){
 		double indexSum = sumNum[0];
 		for(int i=1; i<sumNum.length; i++) {
-		indexSum = indexSum + sumNum[i];
+			indexSum = indexSum + sumNum[i];
 		}
 		//Sends the indexSum to the main method.
 		return indexSum;
 	}
-	
+
 	public static double average(double[]avNum){
 		double indexAv = avNum[0];
 		for(int i=1; i<avNum.length; i++) {
-		indexAv = indexAv + avNum[i];
+			indexAv = indexAv + avNum[i];
 		}
 		double av = indexAv/avNum.length;
-		
+
 		//Sends the av to the main method.
 		return av;
 	}
-	
+
 	public static double median(double[]medNum){
+		Arrays.sort(medNum);
+		if (medNum.length%2 != 0) {
+		int med = medNum.length/2;
+		double num = medNum[med];
+		return num;
 	
-	
-	
+		}
+		else 
+		{
+		int med = medNum.length/2;
+		double med2 = medNum.length/2+1;
+		double num = medNum[med];
+		double num2 = [med2];
+		}
+
+
+
 	}
 }
 
