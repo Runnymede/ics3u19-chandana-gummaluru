@@ -11,6 +11,8 @@ public class MathPlus {
 	 */	
 	public static void main(String[]args) {
 		Scanner sc = new Scanner(System.in);
+		
+		int []myArray = {2,4,2,7,8,2,8,5,3,4,2,2};
 
 		//Asks the user to enter how many numbers they want in the array.
 		System.out.println("How many numbers would you like in your array?");
@@ -20,11 +22,14 @@ public class MathPlus {
 
 		//Creates a new array with the given indices. 
 		int[] array = new int[arrayNum];
+		double[]array2 = new double [arrayNum];
+
 
 		//Asks the user to enter values for each index.
 		System.out.println("Enter the " +arrayNum+ " index values one by one.");
 		for(int i = 0; i<arrayNum; i++) {
 			array[i] = sc.nextInt();
+			array2[i]= array[i];
 		}
 
 		int small = min(array);
@@ -39,6 +44,8 @@ public class MathPlus {
 		double average = average(array);
 		System.out.println("The average of all the numbers is: " +average);
 
+		double median = median(array2);
+		System.out.println("The median of all the numbers is: " +median);
 
 
 
@@ -153,20 +160,38 @@ public class MathPlus {
 	}
 
 	public static double median(double[]medNum){
+
+		//Sorts the array values in order from smallest to greatest.
 		Arrays.sort(medNum);
+
+		//If it's an odd number, it has one median value.
 		if (medNum.length%2 != 0) {
-		int med = medNum.length/2;
-		double num = medNum[med];
-		return num;
-	
+			int med = medNum.length/2;
+			double num = medNum[med];
+			return num;
+
 		}
 		else 
 		{
-		int med = medNum.length/2;
-		double med2 = medNum.length/2+1;
-		double num = medNum[med];
-		double num2 = [med2];
+			int med = medNum.length/2;
+			int med2 = med-1;
+			double num = medNum[med];
+			double num2 = medNum[med2];
+			double median = (num+num2)/2;
+			return median;
+
 		}
+		
+		public static double mode(double[]modeNum) {
+			for (int i=0; i<12; i++)
+			
+			
+
+		}
+		
+		
+		
+		
 
 
 
