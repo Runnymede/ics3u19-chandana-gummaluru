@@ -11,7 +11,7 @@ public class MathPlus {
 	 */	
 	public static void main(String[]args) {
 		Scanner sc = new Scanner(System.in);
-		
+
 		int []myArray = {2,4,2,7,8,2,8,5,3,4,2,2};
 
 		//Asks the user to enter how many numbers they want in the array.
@@ -47,6 +47,21 @@ public class MathPlus {
 		double median = median(array2);
 		System.out.println("The median of all the numbers is: " +median);
 
+		System.out.println("Enter a number to determine if it is prime:");
+		int checkPrime = sc.nextInt();
+		boolean p = prime(checkPrime);
+
+
+		//Prints "Not prime!" if the number is divisible by numbers other than itself or 1.
+		if (!p)
+		{
+			System.out.println("Not prime!");
+		}
+		//Prints "Prime!" if the number is only divisible itself and 1.
+		else
+		{
+			System.out.println("Prime!");
+		}
 
 
 
@@ -171,30 +186,46 @@ public class MathPlus {
 			return num;
 
 		}
-		else 
-		{
+		else {
 			int med = medNum.length/2;
 			int med2 = med-1;
 			double num = medNum[med];
 			double num2 = medNum[med2];
 			double median = (num+num2)/2;
+
 			return median;
+		}
+	}
+
+	public static double mode(double[]modeNum) {
+		for (int i=0; i<array.length; i++) {
+			
+		}
+
+
+
+	}
+
+	public static boolean prime(int checkPrime) {
+		//Variables...
+		int div = 2;
+		int num2;
+		boolean prime2 = true;
+
+		//Determines the remainder of the given number after divided by 2.
+		while(div<checkPrime)
+		{
+			num2 = checkPrime%div;	
+			div ++;
+			if (num2 == 0)
+			{
+				prime2 = false;
+				break;
+
+			}
 
 		}
-		
-		public static double mode(double[]modeNum) {
-			for (int i=0; i<12; i++)
-			
-			
-
-		}
-		
-		
-		
-		
-
-
-
+		return prime2;
 	}
 }
 
