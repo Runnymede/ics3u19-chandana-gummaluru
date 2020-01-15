@@ -12,7 +12,7 @@ public class MathPlus {
 	public static void main(String[]args) {
 		Scanner sc = new Scanner(System.in);
 
-		int []myArray = {2,4,2,7,8,2,8,5,3,4,2,2};
+		double []myArray = {2,4,2,7,8,2,8,5,3,4,2,2};
 
 		//Asks the user to enter how many numbers they want in the array.
 		System.out.println("How many numbers would you like in your array?");
@@ -47,6 +47,10 @@ public class MathPlus {
 		double median = median(array2);
 		System.out.println("The median of all the numbers is: " +median);
 
+
+		double m = mode(myArray);
+		System.out.println("The mode of all the numbers is: " +m);
+
 		System.out.println("Enter a number to determine if it is prime:");
 		int checkPrime = sc.nextInt();
 		boolean p = prime(checkPrime);
@@ -62,6 +66,11 @@ public class MathPlus {
 		{
 			System.out.println("Prime!");
 		}
+
+		System.out.println("Enter a number to find it's factorial:");
+		int facNum = sc.nextInt();
+		long g = factorial(facNum);
+		System.out.println(g);
 
 
 
@@ -198,11 +207,21 @@ public class MathPlus {
 	}
 
 	public static double mode(double[]modeNum) {
-		for (int i=0; i<array.length; i++) {
-			
+		double mostOccur = 0;
+		for (int a=0; a<modeNum.length; a++) {
+			int counter1 = 0;
+			for (int b=0; b<a; b++) {	
+
+				if (modeNum[a]==modeNum[b]) {
+					int counter2 = counter1;
+					if (counter2 > counter1) {
+						mostOccur = modeNum[a];
+					}
+				}
+			}
 		}
 
-
+		return mostOccur;
 
 	}
 
@@ -227,6 +246,19 @@ public class MathPlus {
 		}
 		return prime2;
 	}
+
+	public static long factorial(int factorialNum) {
+		int multiplier = 1;
+		long sum = 0;
+		for(int i=0; i<factorialNum; i++) {
+			for(int j=0; i>=j; j--) {
+			sum =factorialNum*multiplier;
+			}
+		}
+		return sum;
+	}
+	
+	
 }
 
 
