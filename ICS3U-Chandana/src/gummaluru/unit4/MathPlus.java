@@ -71,10 +71,8 @@ public class MathPlus {
 		int facNum = sc.nextInt();
 		long g = factorial(facNum);
 		System.out.println(g);
-
-
-
 	}
+	
 	/**
 	 * This method determines the lowest number value in the array.	
 	 * @param smallestNum
