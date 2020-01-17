@@ -10,13 +10,18 @@ public class WordPuzzleGame {
 	public static void main(String[]args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Welcome to Puzzling Words! Let's begin.");
+		//introduction to the game.
+		System.out.println("Welcome to Puzzling Words! You will recieve a random puzzle to solve.");
+		System.out.println("Let's begin.");
+		System.out.println("");
 		System.out.println("Player 1 can start the game.");
 		System.out.println("Pick a letter, buy a vowel, or solve the puzzle.");
+		System.out.println("");
 		System.out.println("Remember:");
 		System.out.println("Buying a vowel costs you points.");
 		System.out.println("For example, if there are 3 a's in the puzzle, you will lose 3 points.");
-	
+
+
 		//array of 2 indexes that holds the values of both player's scores.
 		int totalScores[] = new int[2];
 
@@ -24,20 +29,21 @@ public class WordPuzzleGame {
 		String listOfPuzzles[] = new String[]{
 				"Running through the woods.", 
 				"Eating fish from the water.", 
-				"Climbing up the big birch tree."};
+				"Climbing up the big birch tree.",};
+
 
 		//variable that holds the number of puzzles in the game.
 		int puzzleNumber = 0;
 
 
 		while (puzzleNumber < 5) {
-			//select a random puzzle.
+			//selects a random puzzle.
 			String puzzle = selectPuzzle(listOfPuzzles);
 
-			//play the puzzle.
+			//plays the puzzle.
 			int scores[] = play(puzzle);
 
-			//add scores.
+			//adds scores.
 			totalScores[0] += scores[0];
 			totalScores[1] += scores[1];
 
@@ -65,16 +71,18 @@ public class WordPuzzleGame {
 		boolean turn1 = true;
 		boolean guessed = false;
 		boolean[] letterGuessed = new boolean[26];
-
+		
+		//this array holds the values of the score in two separate indexes.
 		int scores[] = new int[2];
-
+		
 		boolean[] charsToDisplay = new boolean[puzzle.length()];
 
 		int charsLeft = setupPuzzle(puzzle, charsToDisplay);
 		displayPuzzle(puzzle, charsToDisplay);
 
 		Scanner sc = new Scanner(System.in);
-
+		
+		//continues to read user input if the puzzle has not yet been solved.
 		while (!guessed && charsLeft > 0) {
 			char guess = sc.next().charAt(0);
 
@@ -83,7 +91,7 @@ public class WordPuzzleGame {
 			}
 
 			letterGuessed[guess - 'a'] = true;
-
+			
 			int count = guessLetter(guess, puzzle, charsToDisplay);
 			displayPuzzle(puzzle, charsToDisplay);
 
@@ -95,7 +103,7 @@ public class WordPuzzleGame {
 			if (turn1) {
 				scores[0] += multiply * count;
 			} 
-			
+
 			else {
 				scores[1] += multiply * count;
 			}
@@ -127,7 +135,7 @@ public class WordPuzzleGame {
 	 */
 	public static int guessLetter(char letter, String puzzle, boolean[] charsToDisplay) {
 		int count = 0;
-
+		
 		for (int i = 0; i < puzzle.length(); i++) {
 			if (puzzle.charAt(i) == letter) {
 				charsToDisplay[i] = true;
@@ -182,7 +190,7 @@ public class WordPuzzleGame {
 	}
 
 	/**
-	 * 
+	 * This method holds all the possible vowels the user can choose from.
 	 * @param c
 	 * @return the vowel in the puzzle.
 	 */

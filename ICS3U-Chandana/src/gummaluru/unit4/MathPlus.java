@@ -69,10 +69,26 @@ public class MathPlus {
 
 		System.out.println("Enter a number to find it's factorial:");
 		int facNum = sc.nextInt();
-		long g = factorial(facNum);
-		System.out.println(g);
+		long fac = factorial(facNum);
+		System.out.println("The factorial is " + fac);
+
+		System.out.println("Enter a number to find the number of factors it has:");
+		int findFacNum = sc.nextInt();
+
+		int numFactors = numOfFactors(findFacNum);
+		System.out.println("There are " + numFactors + " factors for your number");
+		
+		System.out.println("Enter a number to find the values of it's factors");
+		int num = sc.nextInt();
+		
+		System.out.println("The factors are ");
+		int []facs = factors(num);
+		for (int i=0; i<facs.length; i++) {
+			System.out.print(facs[i] + ",");
+		}
+
 	}
-	
+
 	/**
 	 * This method determines the lowest number value in the array.	
 	 * @param smallestNum
@@ -245,18 +261,54 @@ public class MathPlus {
 		return prime2;
 	}
 
-	public static long factorial(int factorialNum) {
-		int multiplier = 1;
-		long sum = 0;
-		for(int i=0; i<factorialNum; i++) {
-			for(int j=0; i>=j; j--) {
-			sum =factorialNum*multiplier;
-			}
+	public static long factorial(int facNum) {
+		long num = facNum;
+		for (int nextNum = facNum-1; nextNum>1; nextNum--) {
+			num = nextNum*num;
 		}
-		return sum;
+		return num;
+	}
+
+	public static int numOfFactors(int findFacNum) {
+		int counter = 0;
+		int end = findFacNum;
+		int end2 = (int)Math.rint(end);
+		for (int i = 1; i<=end2; i++) {
+			double find = findFacNum%i;
+			if (find == 0) {
+				counter++;
+			}
+
+		}
+		return counter;	
 	}
 	
-	
+	public static int[] factors (int findFactors) {
+		int counter = 0;
+		int counter2 = 0;
+		int end = findFactors;
+		int end2 = (int)Math.rint(end);
+		for (int i=1; i<=end2; i++) {
+			double find = findFactors%i;
+			if (find==0) {
+				counter++;
+			}
+		}
+		
+		int[] factors2 = new int[counter];
+		
+		for(int i =1; i<=end2; i++) {
+			double find = findFactors%i;
+			if(find==0) {
+				factors2[counter2]=i;
+				counter2++;
+			}
+			
+		}
+		return factors2;
+		
+	}
+
 }
 
 
