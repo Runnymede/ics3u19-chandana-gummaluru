@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class PrimeNumbers {
 	public static void main(String[]args) {
 		Scanner sc = new Scanner(System.in);
-		
+
 		//Part 1 
 
 		//Prompts user to enter a number.
@@ -43,20 +43,20 @@ public class PrimeNumbers {
 		{
 			System.out.println("Prime!");
 		}
-		
+
 		//Bonus
 		System.out.println("Enter a number:");
 		System.out.println("Enter a second number:");
 		int firstNum = sc.nextInt();
 		int secondNum  = sc.nextInt();
 		int divisor = 2;
-			
+
 		while(divisor<firstNum || divisor<firstNum)
 		{
-			
+
 		}
-		
-		
+
+
 	}
 }
 

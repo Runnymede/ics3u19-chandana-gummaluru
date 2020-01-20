@@ -31,26 +31,32 @@ public class MathPlus {
 			array[i] = sc.nextInt();
 			array2[i]= array[i];
 		}
-
+		
+		//prints out the minimum number of the array.
 		int small = min(array);
 		System.out.println("The smallest number is at index: " + small);
-
+		
+		//prints out the maximum number of the array.
 		int big = max(array);
 		System.out.println("The biggst number is at index: " + big);
-
+		
+		//prints out the sum of the array.
 		int sum = sum(array);
 		System.out.println("The sum of all the numbers is: " + sum);
-
+		
+		//prints out the average of the array.
 		double average = average(array);
 		System.out.println("The average of all the numbers is: " +average);
-
+		
+		//prints out the median of the array.
 		double median = median(array2);
 		System.out.println("The median of all the numbers is: " +median);
 
-
+		//prints out the mode of the array.
 		double m = mode(myArray);
 		System.out.println("The mode of all the numbers is: " +m);
-
+		
+		//prints whether or not the number is prime.
 		System.out.println("Enter a number to determine if it is prime:");
 		int checkPrime = sc.nextInt();
 		boolean p = prime(checkPrime);
@@ -68,19 +74,21 @@ public class MathPlus {
 		}
 
 		System.out.println("Enter a number to find it's factorial:");
+		//prints out the factorial of the number.
 		int facNum = sc.nextInt();
 		long fac = factorial(facNum);
 		System.out.println("The factorial is " + fac);
 
 		System.out.println("Enter a number to find the number of factors it has:");
 		int findFacNum = sc.nextInt();
-
+		//prints out the number of factors for the number.
 		int numFactors = numOfFactors(findFacNum);
 		System.out.println("There are " + numFactors + " factors for your number");
 		
 		System.out.println("Enter a number to find the values of it's factors");
 		int num = sc.nextInt();
 		
+		//prints out the factors of the number.
 		System.out.println("The factors are ");
 		int []facs = factors(num);
 		for (int i=0; i<facs.length; i++) {
@@ -137,9 +145,9 @@ public class MathPlus {
 		return indexSum;
 	}
 	/**
-	 * 
+	 * This method finds the average.
 	 * @param avNum
-	 * @return the average of all the values in the array.
+	 * @return av - the average of all the values in the array.
 	 */
 	public static double average(int[]avNum){
 		int indexAv = avNum[0];
@@ -152,7 +160,11 @@ public class MathPlus {
 		return av;
 	}
 
-
+	/**
+	 * This method finds the minimum value.
+	 * @param smallestNum
+	 * @return smallestIndex - the minimum value
+	 */
 	public static int min(double[]smallestNum){
 		int smallestIndex = 0;
 		for(int i=0; i<smallestNum.length; i++) {
@@ -164,7 +176,11 @@ public class MathPlus {
 		//Sends the smallIndex to the main method.
 		return smallestIndex;
 	}
-
+	/**
+	 * This method finds the maximum value.
+	 * @param biggestNum
+	 * @return biggestIndex - the maximum value.
+	 */
 	public static int max(double[]biggestNum){
 		int biggestIndex = 0;
 		for(int i=0; i<biggestNum.length; i++) {
@@ -176,7 +192,11 @@ public class MathPlus {
 		//Sends the biggestIndex to the main method.
 		return biggestIndex;
 	}
-
+	/**
+	 * This method finds the sum.
+	 * @param sumNum
+	 * @return indexSum - the sum.
+	 */
 	public static double sum(double[]sumNum){
 		double indexSum = sumNum[0];
 		for(int i=1; i<sumNum.length; i++) {
@@ -185,7 +205,11 @@ public class MathPlus {
 		//Sends the indexSum to the main method.
 		return indexSum;
 	}
-
+	/**
+	 * This method finds the average.
+	 * @param avNum
+	 * @return av - the average.
+	 */
 	public static double average(double[]avNum){
 		double indexAv = avNum[0];
 		for(int i=1; i<avNum.length; i++) {
@@ -196,7 +220,12 @@ public class MathPlus {
 		//Sends the av to the main method.
 		return av;
 	}
-
+	/**
+	 * This method finds the median.
+	 * @param medNum
+	 * @return num - median if the list of numbers in the array is odd.
+	 * @return median = median if the list of numbers in the array is even.
+	 */
 	public static double median(double[]medNum){
 
 		//Sorts the array values in order from smallest to greatest.
@@ -219,9 +248,14 @@ public class MathPlus {
 			return median;
 		}
 	}
-
+	/**
+	 * This method finds the mode.
+	 * @param modeNum
+	 * @return mostOccur - the mode.
+	 */
 	public static double mode(double[]modeNum) {
 		double mostOccur = 0;
+		//goes through the entire array to find the most occurring number.
 		for (int a=0; a<modeNum.length; a++) {
 			int counter1 = 0;
 			for (int b=0; b<a; b++) {	
@@ -238,7 +272,11 @@ public class MathPlus {
 		return mostOccur;
 
 	}
-
+	/**
+	 * This method determines if the number is prime or not prime.
+	 * @param checkPrime
+	 * @return prime2 - true or false.
+	 */
 	public static boolean prime(int checkPrime) {
 		//Variables...
 		int div = 2;
@@ -260,15 +298,24 @@ public class MathPlus {
 		}
 		return prime2;
 	}
-
+	/**
+	 * This method finds the factorial 
+	 * @param facNum
+	 * @return
+	 */
 	public static long factorial(int facNum) {
 		long num = facNum;
+		//multiplies the number by all numbers lower than it.
 		for (int nextNum = facNum-1; nextNum>1; nextNum--) {
 			num = nextNum*num;
 		}
 		return num;
 	}
-
+	/**
+	 * This method finds the number of factors for the number.
+	 * @param findFacNum
+	 * @return counter - the number of factors.
+	 */
 	public static int numOfFactors(int findFacNum) {
 		int counter = 0;
 		int end = findFacNum;
@@ -282,7 +329,11 @@ public class MathPlus {
 		}
 		return counter;	
 	}
-	
+	/**
+	 * This method finds the factors of the number.
+	 * @param findFactors
+	 * @return factors2 - the factors of the number.
+	 */
 	public static int[] factors (int findFactors) {
 		int counter = 0;
 		int counter2 = 0;
