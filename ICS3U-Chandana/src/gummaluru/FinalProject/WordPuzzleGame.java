@@ -128,7 +128,7 @@ public class WordPuzzleGame {
 		while (!guessed && charsLeft > 0) {
 
 			//user's guess is stored in this variable
-			String guess = sc.nextLine();
+			String guess = sc.nextLine().toUpperCase();
 			int count = 0;
 			int multiplier = 1;
 
