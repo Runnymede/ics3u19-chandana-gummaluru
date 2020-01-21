@@ -18,7 +18,6 @@ public class WordPuzzleGame {
 		System.out.println("- Players will alternate turns.");
 		System.out.println("");
 		System.out.println("Remember:");
-		System.out.println("- When guessing a letter, it must be typed in capitals.");
 		System.out.println("- Buying a vowel costs you points. You may still buy a vowel with 0 points.");
 		System.out.println("- For example, if there are 3 a's in the puzzle, you will lose 3 points.");
 		System.out.println("- If you have no points and you buy a vowel, you will recieve negative points.");
