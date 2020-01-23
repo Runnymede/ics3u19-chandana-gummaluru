@@ -338,7 +338,7 @@ public class MathPlus {
 		int counter = 0;
 		int counter2 = 0;
 		int end = findFactors;
-		int end2 = (int)Math.rint(end);
+		int end2 = end;
 		for (int i=1; i<=end2; i++) {
 			double find = findFactors%i;
 			if (find==0) {
