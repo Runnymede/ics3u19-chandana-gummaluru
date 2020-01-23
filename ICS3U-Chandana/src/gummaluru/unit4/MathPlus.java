@@ -319,7 +319,7 @@ public class MathPlus {
 	public static int numOfFactors(int findFacNum) {
 		int counter = 0;
 		int end = findFacNum;
-		int end2 = (int)Math.rint(end);
+		int end2 = end;
 		for (int i = 1; i<=end2; i++) {
 			double find = findFacNum%i;
 			if (find == 0) {
